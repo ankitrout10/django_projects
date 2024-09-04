@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load cache %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>**** Temple City Of India **********</h2>
+    <p>Bhubaneswar is the capital of the Indian state of Odisha, located in the Khordha district. The region, especially the old town, was historically often depicted as Chakra Khetra and Ekamra Khetra (Area adorned with a mango tree). Bhubaneswar is dubbed the "Temple City", a nickname earned because of many temples which are standing there.</p>
+    {% cache 100 cache_block %}
+    <h2>Bhubaneswar is also a smart city ..................</h2>
+    {% endcache cache_block %}
+    <p>****************************</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <div class="container"> <h1>Student Records: </h1> </div>
+    
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Reg_no</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mark</th>
+            <th scope="col">Course</th>
+            <th scope="col">College</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in records %}
+          <tr>
+            <th scope="row">{{i.id}}</th>
+            <td><a href="{% url 'card' i.id %}">{{i.name}}</a></td>
+            <td>{{i.reg_no}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.mark}}</td>
+            <td>{{i.course}}</td>
+            <td>{{i.college}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+  </body>
+</html>

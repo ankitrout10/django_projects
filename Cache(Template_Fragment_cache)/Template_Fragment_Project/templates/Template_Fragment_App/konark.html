@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load cache %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome to konark</h2>
+    <p>Konark Sun Temple is a 13th-century CE Hindu Sun temple at Konark about 35 kilometres (22 mi) northeast from Puri city on the coastline in Puri district, Odisha, India.The temple is attributed to king Narasingha Deva I of the Eastern Ganga dynasty about 1250 CE.</p>
+    {% cache 120 cache_block %}
+    <p>Konark is known for the Sun Temple..................</p>
+    {% endcache cache_block %}
+</body>
+</html>

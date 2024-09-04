@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load cache %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>***********About Jagannath*******</h1>
+    <p>Jagannath Dham located in puri, Odisha</p>
+    {% cache 120 cache_block %}
+    <p>************ Jay Jagannath Swami Nayna Patagami **********</p>
+    {% endcache cache_block %}
+    <p>*************</p>
+    {% cache 150 sea_beach_block%}
+    <h1>Puri golden sea beach </h1>
+    {% endcache sea_beach_block %}
+
+
+    
+</body>
+</html>
